@@ -1,8 +1,8 @@
-# MusicProDjangoV2
+# PandasAI2
 
 ## Descripción
 
-Es un proyecto de prueba desarrollado en Django y Python, el cual consiste en una ecommerce de instrumentos musicales, donde se pueden ver los productos, agregarlos al carrito y crear cuentas para los distintos tipos de usuarios.
+Es un proyecto de prueba desarrollado en Django y Python, el cual consiste en ......
 
 ## Instalación
 
