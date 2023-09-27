@@ -160,3 +160,5 @@ footer div > p{
 .card:hover .back {
     transform: perspective(600px) rotateY(360deg);
 }
+
+/* Fin Cards */
