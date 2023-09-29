@@ -17,6 +17,9 @@ urlpatterns = [
     # Paginas
     path('acercaDe', views.acerca_de, name="acerca_de"),
     path('simple_checkout', views.simple_checkout, name="simple_checkout"),
+    # página instructivo 
+    path('Instructivo', views.Instructivo, name="Instructivo"),
+    
     
     # PRODUCTOS
     path('', views.producto_index, name="producto_index"),

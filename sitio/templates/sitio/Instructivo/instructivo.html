@@ -1,0 +1,267 @@
+{% extends "sitio/layout.html" %}
+
+{% block content %}
+<style>
+    .card {
+  width: 300px;
+  height: 325px;
+  background: #36B2A5;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #212121;
+  border: 2px solid #F69156;
+  transition: all .5s ease;
+  margin: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+
+
+.save {
+  background: #eb4b38;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.see-more {
+  background: #ab4b38;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.save, .see-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.save__icon, .see-more__icon {
+  width: 15px;
+  fill: white;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 15px;
+  gap: 3px;
+}
+
+.page {
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.title {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px 0px #ab4b3866;
+}
+
+.card:hover .icons {
+  z-index: 1;
+  opacity: 1;
+}
+
+.card:hover .image {
+  filter: brightness(.8);
+}
+
+.card:hover .title {
+  color: #F69156;
+}
+</style>
+<section class="row mt-3">
+
+    <!-- Titulo -->
+    <div class="col-12 mb-4 text-center text-center text-md-left">
+        <h3 class="display-4">Instructivo</h3>
+        <h4 class="h4 mt-3">Somos DataMinds!</h4>
+        <section class="container">
+            <div class ="row">
+                <div class="card">
+                    <div class="icons"> 
+                       
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 1</h4>
+                      <a href="#" class="title">Registrese, en caso de ya tener una cuenta inicie sesión</a>
+                      <p class="content">El primer paso para utilizar nuestros servicios es tener una cuenta creada. </p>
+                    </div>
+                 </div>
+                 <div class="card">
+                    <div class="icons"> 
+                       
+                       
+                     </button>
+                     
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 2</h4>
+                      <a href="#" class="title">Elija su tipo de subscripción</a>
+                      <p class="content">Para empezar a utlizar nuestros servicios, primero necesita tener una subscripción, al registrarse su nivel
+                        de subscripción es de nivel 0. </p>
+                    </div>
+                 </div>
+
+                 <div class="card">
+                    <div class="icons"> 
+                       
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 2.1</h4>
+                      <a href="#" class="title">Tipos de subscripciones</a>
+                        <p class="content">La subscripción de NIVEL 1 cuenta con los servicios de agente de Langchain que permite hacer consultas 
+                        con un límite de 100 preguntas </p>
+                        <p class="content">La subscripción de NIVEL 2 cuenta con los servicios de agente PandasAI que permite hacer consultas 
+                            con un límite de 200 preguntas y crear 20 gráficos</p>
+                    </div>
+                 </div>
+                 <div class="card">
+                    <div class="icons"> 
+                       
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 3</h4>
+                      <a href="#" class="title">Subir archivo CSV</a>
+                      <p class="content">Luego de escoger una subcripción va a poder subir archivos CSV</p>
+                    </div>
+                 </div>
+
+                 <div class="card">
+                    <div class="icons"> 
+                       
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 4</h4>
+                      <a href="#" class="title">Realizar consulta a un agente</a>
+                      <p class="content">Ya puede empezar a realizar consultas con los agentes disponibles adecuado
+                         a su nivel. Langchain y PandasAI, para ello debe seleccionar su archivo CSV y podrá realizar la consulta 
+                    al agente  </p>
+                    </div>
+                 </div>
+
+                 <div class="card">
+                    <div class="icons"> 
+                       
+                       <svg viewBox="0 0 20 20" class="see-more__icon">
+                                             <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+                                                 S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+                                                 S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+                                                 S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+                                                 S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+                                                 S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+                                                 S10.558,11.011,10,11.011z"></path>
+                                         </svg>
+                     </button>
+                     </div>
+                   <div class="image"></div>
+                    <div class="card__info">
+                        <h4 class="h4 mt-3">Paso 5</h4>
+                      <a href="#" class="title">Respuesta de los agentes</a>
+                      <p class="content">Dependiendo de su nivel de subcripción los agentes responderan las preguntas
+                        que usted realizó.
+                      </p>
+                    </div>
+                 </div>
+
+
+
+
+            </div>
+            
+            </div>
+            </div>
+        </section>
+        
+        
+    
+
+</section>
+
+
+{% endblock %}

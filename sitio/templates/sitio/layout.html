@@ -46,20 +46,10 @@
                 {% else %}
                 <a role="button" class="btn btn-primary mr-3" href="{% url 'login'%}?next={{request.path}}">
                     Ingresar
-                </a>
+                </a>  
                 <a role="button" class="btn btn-secondary mr-3" href="{% url 'SITIO:register' %}">
                     Registrarse
                 </a>
-                {% endif %}
-                
-                {% if user.is_superuser or not user.is_authenticated %}
-                    <button role="button" class="btn btn-success mr-3" disabled>
-                        <i class="fas fa-shopping-cart"></i>
-                    </button>
-                {% else %}
-                    <a role="button" class="btn btn-success mr-3" href="{% url 'SITIO:carrito_index' %}">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
                 {% endif %}
             </div>
 
@@ -81,22 +71,17 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Categorias</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-
-                            {% for categoria in categorias %}
-                                <a class="dropdown-item" href="{% url 'SITIO:productos_por_categoria' categoria.id %}">{{ categoria.descripcion.capitalize }}</a>
-                            {% endfor %}
-
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">LLM</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'SITIO:Instructivo' %}">Instructivo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'SITIO:acerca_de' %}">Acerca de</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto:musicprocontact@gmail.com">Contacto</a>
+                        <a class="nav-link" href="mailto:datamindscontact@gmail.com">Contacto</a>
                     </li>
 
                     <!-- PARA ADMINS/MODERADORES -->
@@ -107,10 +92,6 @@
                     {% endif %}
 
                 </ul>
-                <form action="{% url 'SITIO:producto_search' %}" method="GET" class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" name="texto" type="text" placeholder="Buscar producto...">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscador</button>
-                </form>
             </div>
         </div>
     </nav>
