@@ -252,3 +252,7 @@ def sucess(request):
     categorias = Categoria.objects.all(activo = True)
     context = {"productos":productos, "categorias":categorias}
     return render(request, 'sitio/carrito/sucess.html', context)
+
+#pagina instructivo
+def Instructivo (request):
+    return render(request, 'sitio/Instructivo/instructivo.html')
